@@ -12,9 +12,15 @@ function cube(v) {
     return y;
 }
 
+console.log(cube(27));
 console.log(cube(8));
+console.log(cube(1));
+console.log(cube(729));
 
 function cube(v) {
    return Math.cbrt(v);
 }
+console.log(cube(27));
 console.log(cube(8));
+console.log(cube(1));
+console.log(cube(729));
