@@ -18,9 +18,11 @@ setTimeout(function (item) {
 
 /* Рекрусивный setTimeout */
 function hello(word) {
-    setTimeout(function tick() {
-    console.log(word);
-    hello = setTimeout(tick, 1000);
+  let say = setTimeout(function tick(){
+       console.log(word);
+       say = setTimeout(tick, 1000);
+       clearTimeout(say);
   }, 1000);
+
 }
-hello("Say Hello");
+hello("Hello Antonio!!!");
