@@ -11,3 +11,24 @@ function returnUnique(arr) {
 }
 console.log(returnUnique([1, 9, 8, 8, 7, 6, 1, 6]));
 console.log(returnUnique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]));
+
+
+
+function returnUnique(arr) {
+	var obj = {};
+	for (var i in arr) {
+		if (!obj[arr[i]]) {
+     obj[arr[i]] = 1
+    } else {
+      obj[arr[i]]++
+    }
+	}
+ var newArr = [];
+ for (var key in obj) {
+   if (obj[key] === 1) {
+       newArr.push(+key);
+   }
+ }
+ return newArr;
+}
+console.log(returnUnique([5, 5, 2, 4, 4, 4, 9, 9, 9, 1]));
